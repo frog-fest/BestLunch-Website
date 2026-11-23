@@ -1,0 +1,6 @@
+0.1.1 – 2026-11-23
+* Datenschutzerklärung: Abschnitt 16 um die Datensicherung (Inhalt, Wiederherstellen) und den optionalen Passwortschutz mit AES-256 ergänzt; Stand 23. November 2026.
+
+0.1.0 – 2026-11-22
+* Datenschutzerklärung: Google-Play-In-App-Updates und Remote-Config-Steuerung der Update-Prüfung ergänzt; Stand 22. November 2026.
+* Neu: Versionierung eingeführt (VERSION, version_history.txt).

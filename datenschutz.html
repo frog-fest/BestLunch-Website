@@ -65,7 +65,7 @@
 <h1>Datenschutzerklärung für BestLunch</h1>
 
 <p class="updated">
-    Stand: September 2026
+    Stand: 23. November 2026
 </p>
 
 <h2>1. Verantwortlicher</h2>
@@ -427,7 +427,7 @@
     technische Zuordnung von Ereignissen und Fehlern erforderlich sind.
 </p>
 
-<h2>13. Firebase Remote Config</h2>
+<h2>13. Firebase Remote Config und App-Updates</h2>
 
 <p>
     BestLunch verwendet Firebase Remote Config, um bestimmte Konfigurationswerte
@@ -442,6 +442,18 @@
 <p>
     Über Remote Config werden keine Restaurantdaten oder GPS-Koordinaten
     an BestLunch übertragen.
+</p>
+
+<p>
+    Über Remote Config legt BestLunch außerdem fest, ob die App auf neue
+    Versionen prüft und ab welcher Version ein Update erforderlich ist.
+    Über die Google-Play-Funktion für In-App-Updates prüft die App beim Start,
+    ob in Google Play eine neue Version verfügbar ist, und kann sie
+    herunterladen und installieren. Dabei werden technische Verbindungs- und
+    Gerätedaten durch Google Play verarbeitet; Restaurantdaten oder
+    GPS-Koordinaten werden hierfür nicht benötigt. Diese Funktion dient dem
+    technischen Betrieb und der Sicherheit der App und ist unabhängig von der
+    Entscheidung über Nutzungsstatistiken.
 </p>
 
 <h2>14. App-Bewertungen</h2>
@@ -474,7 +486,7 @@
     BestLunch liest keine Kontakte oder Telefonnummern aus dem Gerät aus.
 </p>
 
-<h2>16. Export und Import von Lokaldaten</h2>
+<h2>16. Export, Import und Datensicherung</h2>
 
 <p>
     BestLunch ermöglicht den Export und Import deiner lokal gespeicherten
@@ -492,6 +504,21 @@
     Die Weitergabe der exportierten Daten an andere Apps oder Dienste erfolgt
     ausschließlich durch deine ausdrückliche Auswahl. BestLunch übermittelt
     die Exportdatei nicht selbst an einen eigenen Server.
+</p>
+
+<p>
+    Zusätzlich kannst du eine vollständige Datensicherung erstellen. Sie
+    enthält alle Lokaldaten sowie deine Darstellungseinstellungen (Design und
+    Akzentfarbe); die Kartenposition und deine Einstellung zu
+    Nutzungsstatistiken sind nicht enthalten. Beim Wiederherstellen werden die
+    Lokaldaten auf dem Gerät durch die der Sicherung ersetzt.
+</p>
+
+<p>
+    Sicherungen und Exportdateien können optional mit einem Passwort geschützt
+    werden. Sie werden dann auf deinem Gerät mit AES-256 verschlüsselt. Das
+    Passwort wird weder gespeichert noch übermittelt; ohne das Passwort lässt
+    sich eine geschützte Datei nicht öffnen.
 </p>
 
 <h2>17. Weitergabe an externe Dienste</h2>
@@ -514,6 +541,7 @@
     <li>Google Firebase Analytics;</li>
     <li>Google Firebase Crashlytics;</li>
     <li>Google Firebase Remote Config;</li>
+    <li>Google Play (In-App-Updates);</li>
     <li>Mixpanel;</li>
     <li>Nominatim / OpenStreetMap.</li>
 </ul>
