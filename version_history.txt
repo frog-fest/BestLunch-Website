@@ -1,6 +1,15 @@
-0.1.1 – 2026-11-23
+0.1.3 – 2026-11-23
 * Datenschutzerklärung: Abschnitt 16 um die Datensicherung (Inhalt, Wiederherstellen) und den optionalen Passwortschutz mit AES-256 ergänzt; Stand 23. November 2026.
+* Versionsnummern nach Zusammenführung mit origin/main neu geordnet (lokal zuvor als 0.1.0/0.1.1 geführt).
 
-0.1.0 – 2026-11-22
+0.1.2 – 2026-11-22
 * Datenschutzerklärung: Google-Play-In-App-Updates und Remote-Config-Steuerung der Update-Prüfung ergänzt; Stand 22. November 2026.
-* Neu: Versionierung eingeführt (VERSION, version_history.txt).
+
+0.1.1 – 2026-11-18
+* Korrektur: Liefervertrag für ChatGPT in COMMON_RULES.md und AGENTS.md eindeutig geregelt – ZIP nur mit geänderten Dateien, kein externer Regel- oder Standsabgleich.
+* Keine Änderungen an veröffentlichten Website-Inhalten.
+
+0.1.0 – 2026-11-17
+* Projektversionierung eingeführt; bisher keine lokale Projektversion/Paketnummer gefunden.
+* AGENTS.md mit gemeinsamen Arbeitsregeln, lokaler/GitHub-Quellenwahl und Website-spezifischen Hinweisen ergänzt.
+* Keine Änderungen an veröffentlichten Website-Inhalten.
