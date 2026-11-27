@@ -1,3 +1,8 @@
+0.1.4 – 2026-11-27
+* Datenschutzerklärung: Dienste Photon, Overpass, Nager.Date und OpenStreetMap-Kartenserver ergänzt, ebenso die Übertragung bei angetippten Kartenpunkten und beim Ergänzen von Lokalen.
+* Datenschutzerklärung: lokal gespeicherter letzter Standort und Kartenausschnitt sowie die Übergabe an Google Maps bei der Navigation ergänzt.
+* Datenschutzerklärung: Update-Prüfung auch bei der Rückkehr in die App; Stand 27. November 2026.
+
 0.1.3 – 2026-11-23
 * Datenschutzerklärung: Abschnitt 16 um die Datensicherung (Inhalt, Wiederherstellen) und den optionalen Passwortschutz mit AES-256 ergänzt; Stand 23. November 2026.
 * Versionsnummern nach Zusammenführung mit origin/main neu geordnet (lokal zuvor als 0.1.0/0.1.1 geführt).

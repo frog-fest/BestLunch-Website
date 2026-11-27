@@ -65,7 +65,7 @@
 <h1>Datenschutzerklärung für BestLunch</h1>
 
 <p class="updated">
-    Stand: 23. November 2026
+    Stand: 27. November 2026
 </p>
 
 <h2>1. Verantwortlicher</h2>
@@ -145,6 +145,9 @@
     <li>Telefonnummer und Website eines Restaurants;</li>
     <li>Öffnungszeiten;</li>
     <li>Standortinformationen eines Restaurants;</li>
+    <li>der zuletzt gewählte Such- bzw. GPS-Standort und der zuletzt angezeigte
+        Kartenausschnitt, damit die App beim nächsten Start dort weitermachen
+        kann;</li>
     <li>App-Einstellungen wie Theme oder Akzentfarbe.</li>
 </ul>
 
@@ -187,7 +190,7 @@
     als Parameter an Firebase Analytics oder Mixpanel übermittelt.
 </p>
 
-<h2>6. Ortssuche und Geocodierung</h2>
+<h2>6. Ortssuche, Geocodierung und weitere Abfragen</h2>
 
 <p>
     BestLunch verwendet für bestimmte Such- und Geocodierungsfunktionen den
@@ -211,8 +214,43 @@
 </p>
 
 <p>
+    Tippst du auf der Karte einen Punkt an, um dort ein Lokal zu übernehmen,
+    oder ergänzt du fehlende Angaben eines gespeicherten Lokals, werden die
+    Koordinaten dieses Punktes bzw. Lokals übertragen. Für ein ausgewähltes
+    oder gespeichertes Lokal können außerdem sein Name und Ort bzw. seine
+    Adresse an Nominatim übertragen werden.
+</p>
+
+<p>
     Diese Übertragungen erfolgen ausschließlich zur Durchführung der vom Nutzer
     ausgelösten Such- bzw. Geocodierungsfunktion.
+</p>
+
+<h3>Lokale in der Nähe eines Kartenpunktes: Photon und Overpass</h3>
+
+<p>
+    Um Lokale in der Nähe eines angetippten Punktes vorzuschlagen, sendet
+    BestLunch dessen Koordinaten an den Dienst Photon
+    (<code>photon.komoot.io</code>). Liefert Photon keine Treffer oder ist der
+    Dienst nicht erreichbar, werden die Koordinaten an einen Overpass-Server
+    gesendet (<code>overpass.private.coffee</code> oder
+    <code>overpass-api.de</code>). Beide Dienste arbeiten mit Daten von
+    OpenStreetMap.
+</p>
+
+<h3>Feiertage: Nager.Date</h3>
+
+<p>
+    Ist bei einem Lokal „An Feiertagen geschlossen“ eingetragen, fragt
+    BestLunch beim Dienst Nager.Date (<code>date.nager.at</code>) die
+    Feiertage ab. Übertragen werden dabei das Jahr und der Ländercode des
+    Lokals, keine Koordinaten, Namen oder Adressen.
+</p>
+
+<p>
+    Bei jeder Abfrage eines externen Dienstes fallen technisch bedingt
+    Verbindungsdaten wie die IP-Adresse an. Bei den Ortsdiensten kann BestLunch
+    zusätzlich eine Kennung der App mitsenden.
 </p>
 
 <p>
@@ -245,6 +283,13 @@
 <p>
     Die Kartendarstellung erfolgt in BestLunch über die Flutter-Bibliothek
     <code>flutter_map</code>.
+</p>
+
+<p>
+    Die Kartenbilder werden vom Kartenserver von OpenStreetMap
+    (<code>tile.openstreetmap.org</code>) geladen. Dabei erfährt der Server,
+    welcher Kartenausschnitt angezeigt wird, und verarbeitet technische
+    Verbindungsdaten wie die IP-Adresse.
 </p>
 
 <p>
@@ -447,9 +492,9 @@
 <p>
     Über Remote Config legt BestLunch außerdem fest, ob die App auf neue
     Versionen prüft und ab welcher Version ein Update erforderlich ist.
-    Über die Google-Play-Funktion für In-App-Updates prüft die App beim Start,
-    ob in Google Play eine neue Version verfügbar ist, und kann sie
-    herunterladen und installieren. Dabei werden technische Verbindungs- und
+    Über die Google-Play-Funktion für In-App-Updates prüft die App beim Start
+    und bei der Rückkehr in die App, ob in Google Play eine neue Version
+    verfügbar ist, und kann sie herunterladen und installieren. Dabei werden technische Verbindungs- und
     Gerätedaten durch Google Play verarbeitet; Restaurantdaten oder
     GPS-Koordinaten werden hierfür nicht benötigt. Diese Funktion dient dem
     technischen Betrieb und der Sicherheit der App und ist unabhängig von der
@@ -480,6 +525,12 @@
     In diesen Fällen verlässt der Nutzer die unmittelbare Kontrolle der
     BestLunch-App. Für die Verarbeitung von Daten auf der jeweils aufgerufenen
     Webseite bzw. durch andere Apps gelten deren eigene Datenschutzbestimmungen.
+</p>
+
+<p>
+    Startest du die Navigation zu einem Lokal, öffnet BestLunch Google Maps
+    außerhalb der App und übergibt dabei die Koordinaten und den Namen des
+    Lokals.
 </p>
 
 <p>
@@ -543,7 +594,12 @@
     <li>Google Firebase Remote Config;</li>
     <li>Google Play (In-App-Updates);</li>
     <li>Mixpanel;</li>
-    <li>Nominatim / OpenStreetMap.</li>
+    <li>Nominatim / OpenStreetMap;</li>
+    <li>OpenStreetMap-Kartenserver;</li>
+    <li>Photon (<code>photon.komoot.io</code>);</li>
+    <li>Overpass-Server (<code>overpass.private.coffee</code>,
+        <code>overpass-api.de</code>);</li>
+    <li>Nager.Date (<code>date.nager.at</code>).</li>
 </ul>
 
 <p>
@@ -579,8 +635,9 @@
 </p>
 
 <p>
-    Für Daten, die durch externe Dienste wie Firebase, Crashlytics, Mixpanel
-    oder Nominatim verarbeitet werden, gelten die jeweiligen technischen
+    Für Daten, die durch externe Dienste wie Firebase, Crashlytics, Mixpanel,
+    Nominatim, Photon, Overpass, den Kartenserver oder Nager.Date verarbeitet
+    werden, gelten die jeweiligen technischen
     Speicher- und Löschfristen dieser Anbieter.
 </p>
 
